@@ -1,0 +1,47 @@
+---
+// Style Imports
+import '../../styles/global.css';
+
+let title = 'My Astro Site';
+
+// const data = Astro.fetchContent('./**/*.astro'); // returns an array of posts that live at ./src/pages/post/*.md
+// 👆👆👆👆👆👆👆👆👆👆👆👆 is there any way to do this that doesn’t load the stylesheets? and gives me access to the frontmatter in the subdirectory index.astro pages?
+
+---
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{title}</title>
+
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+	<style>
+		header {
+			display: flex;
+			flex-direction: column;
+			gap: 1em;
+			max-width: min(100%, 68ch);
+		}
+	</style>
+</head>
+<body>
+	<main>
+		
+  <h2>Go to: <a href="/projects/analogue-world-clocks">World Clock Project</a></h2>
+
+  <a href="/" style="margin-top: 4rem; display: block">🔙 Back to home</a>
+		<!--
+
+		You can also use imported framework components directly in your markup!
+		
+		Note: by default, these components are NOT interactive on the client.
+		The `:visible` directive tells Astro to make it interactive.
+		
+		See https://docs.astro.build/core-concepts/component-hydration/ 
+
+		-->
+
+	</main>
+</body>
+</html>

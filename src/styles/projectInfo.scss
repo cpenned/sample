@@ -1,0 +1,73 @@
+html {
+  position: relative;
+}
+
+.modal--info-container {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background-color: hsl(220, 4%, 10%, 0.3);
+}
+
+.modal--info {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 0.68181828rem + 1.454545vw, 1.5rem);
+  position: fixed;
+  inset: auto 1.5rem 1.5rem auto;
+  max-width: min(90%, 350px);
+  z-index: 9999;
+  position: absolute;
+}
+
+.modal--info .btn {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  width: clamp(45px, 36.923078px + 2.307692vw, 60px);
+  height: clamp(45px, 36.923078px + 2.307692vw, 60px);
+  position: relative;
+}
+
+.btn[data-name]:is(:hover, :focus-visible)::before {
+  content: attr(data-name);
+  margin: 0;
+  top: -2.8rem;
+  left: 50%;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  color: black;
+  padding: 0.2rem 0.6rem;
+  position: absolute;
+  width: max-content;
+  font-size: 0.8rem;
+  transform: translateX(-50%);
+}
+
+.btn[data-name]:is(:hover, :focus-visible)::after {
+  content: "";
+  margin: 0;
+  padding: 0;
+  top: -1.2rem;
+  left: 50%;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.modal--info .btn--info {
+  width: 30px;
+  height: 30px;
+  width: clamp(30px, 27.3076915px + 0.769231vw, 35px);
+  height: clamp(30px, 27.3076915px + 0.769231vw, 35px);
+}
