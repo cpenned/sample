@@ -1,0 +1,1 @@
+document.querySelector('#fromApp').textContent = "This text loaded from app.js successfully while in dev, but not preview or build.";
